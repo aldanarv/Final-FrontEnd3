@@ -1,29 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useCharContext } from "./utils/global.context";
 
 
-const Card = ({ name, username, id }) => {
+const Card = ({ character }) => {
+  
+  const {state, dispatch } = useCharContext();
+
+  const findFav = state.favs.find(fav => fav.id == character.id)
 
   const addFav = ()=>{
 
-    const localStorageData = JSON.parse(localStorage.getItem('favs')) || [];
-
-    const isCardInLocalStorage = localStorageData.some((card) => card.id === id);
-
-    if (!isCardInLocalStorage) {
-      const updatedLocalStorageData = [...localStorageData, { id, name, username }];
-      localStorage.setItem('favs', JSON.stringify(updatedLocalStorageData));
+    if(findFav){
+      alert('Ya agregaste ese elemento a favoritos')
+    } else {
+      dispatch({type: 'ADD_FAV', payload: character})
+      localStorage.setItem('favs', JSON.stringify(state.favs))
     }
   }
 
   return (
     <div className="card">
-      <img src= {`../../public/images/doctor.jpg`} alt={'Imagen de ${name}'}/>
-      <h3>{name}</h3>
-      <p>{username}</p>
-      <p>Id:{id}</p>
-      <button onClick={addFav} className="favButton">Add fav</button>
-      <Link to={'/detail/${id}'}>Ver detalle</Link>
+      <Link to={'/detail/'+character.id}>
+        <img src= {`../../images/doctor.jpg`} alt={'Imagen de ${name}'}/>
+        <h3>{character.name}</h3>
+        <p>{character.username}</p>
+      </Link>
+      <button onClick={addFav} className="favButton">⭐</button>
     </div>
   );
 };

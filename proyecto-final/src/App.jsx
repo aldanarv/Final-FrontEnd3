@@ -7,9 +7,10 @@ import Home from "./Routes/Home";
 import Favs from "./Routes/Favs";
 import Contact from "./Routes/Contact";
 
-function App() {
 
+function App() {
   return (
+    
       <div className="App">
           <Navbar/>
           <Routes>
@@ -19,7 +20,7 @@ function App() {
             <Route path='/contact' element={<Contact/>}/>
           </Routes>
           <Contact/>
-          <Footer/>
+          <Footer/>          
       </div>
   );
 }

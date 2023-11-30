@@ -11,6 +11,7 @@ body {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
+
   .favButton{
     background-color: rgba(136, 136, 136, 0.116);
     padding: 10px;
@@ -22,13 +23,43 @@ body {
   h1{
     text-align: center;
   }
+
+  h4{
+    padding: 10px;
+  }
   
   nav{
     display: flex;
-    width: 80vw;
-    justify-content: flex-start;
+    width: 95vw;
+    justify-content: space-around;
+    align-items: center;
     padding: 1rem;
   }
+
+  nav > div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+
+  .themeButton{
+    padding: 13px;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgba(136, 136, 136, 0.116);
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+   }
+   
+   button:hover {
+    background-color: hsl(0, 0%, 92%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(230, 230, 230) 0px 7px 29px 0px;
+   }
+   
   
   a{
     color: #000;
@@ -36,18 +67,17 @@ body {
     margin: 5px;
     cursor: pointer;
   }
+
   a:hover{
-    color: rgb(136, 136, 136);
+    color: rgb(171, 169, 169);
   } 
   
   footer {
     display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem;
-    position: relative;
+    width: 95vw;
+    justify-content: space-around;
+    padding: 1rem;
     bottom: 0;
-    width: 90%;
     height: 40px;
     margin-top: 2rem;
   }
@@ -56,6 +86,15 @@ body {
     width: 200px;
     margin: 0;
   }
+
+  footer > div{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    
+
+  }
+
   footer > p{
     margin: 0;
     padding-top: 0.7rem;
@@ -123,6 +162,15 @@ body {
     background-color: #12121296;
     color: white;
   }
+
   .dark > a {
     color: white;
+  }
+
+  .dark > div > a{
+    color: white;
+  }
+
+  .dark > div > button{
+    background-color: rgb(230, 231, 231);
   }
