@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { useCharContext } from "./utils/global.context";
 
 
@@ -12,17 +12,21 @@ const Card = ({ character }) => {
   const addFav = ()=>{
 
     if(findFav){
-      alert('Ya agregaste ese elemento a favoritos')
+      alert('Has eliminado este odontólogo de favoritos')
+      dispatch({type: 'DELETE_FAV', payload: character})
+      localStorage.setItem('favs', JSON.stringify(state.favs))
     } else {
+      alert('Agregaste este odontólogo a favoritos')
       dispatch({type: 'ADD_FAV', payload: character})
       localStorage.setItem('favs', JSON.stringify(state.favs))
+      console.log('Odontólogo:', state.favs);
     }
   }
 
   return (
     <div className="card">
       <Link to={'/detail/'+character.id}>
-        <img src= {`../../images/doctor.jpg`} alt={'Imagen de ${name}'}/>
+        <img src= {`../../images/doctor.jpg`} alt={'Imagen odontólogo'}/>
         <h3>{character.name}</h3>
         <p>{character.username}</p>
       </Link>

@@ -1,11 +1,5 @@
 import { useEffect, useReducer } from "react";
 
-//const TOGGLE_THEME = "TOGGLE_THEME";
-//const DATA_DENTISTS = "DATA_DENTISTS";
-//const ADD_FAVORITES = "ADD_FAVORITES";
-//const REMOVE_FAVORITES = "REMOVE_FAVORITES";
-//const DATA_DENTIST = "DATA_DENTIST";
-
 const initialState = {
     dentist: {},
     list: [],

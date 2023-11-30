@@ -10,12 +10,11 @@ const Context = ({children}) => {
     const [state, dispatch, fetchDetailData ] = useReducerContext();
 
     useEffect(() => {
-        const storedFavorites = localStorage.getItem('favorites'); 
-        if (storedFavorites) {
-          dispatch({ type: 'ADD_FAVORITES', payload: JSON.parse(storedFavorites) });
+        const storedFavs = localStorage.getItem('favs'); 
+        if (storedFavs) {
+          dispatch({ type: 'ADD_FAV', payload: JSON.parse(storedFavs) });
         }
-      },
-      []);
+      }, []);
     
       return (
         <CharContext.Provider value={{ state, dispatch, fetchDetailData}}>
@@ -28,7 +27,7 @@ const Context = ({children}) => {
         return useContext(CharContext);
     };
     
-    
+
     export {useCharContext};
 
     export default Context;
