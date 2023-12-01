@@ -4,7 +4,7 @@ const initialState = {
     dentist: {},
     list: [],
     favs: [],
-    theme: true,
+    theme:'light',
   };
 
 const reducer = (state, action) => {
@@ -18,32 +18,7 @@ const reducer = (state, action) => {
         case 'DELETE_FAV':
             return { ...state, favs: state.favs.filter((fav) => fav.id !== action.payload.id) };
         case 'CHANGE_THEME':
-            return {...state, theme: !state.theme}
-        case 'SET_FORM_FIELD':
-            return {
-                ...state,
-                form: {
-                ...state.form,
-                [action.field]: action.value,
-                },
-            };
-        case 'SUBMIT_FORM':
-            return {
-                ...state,
-                form: {
-                ...state.form,
-                submitted: true,
-                },
-            };
-        case 'RESET_FORM':
-            return {
-                ...state,
-                form: {
-                name: '',
-                email: '',
-                submitted: false,
-                },
-            };
+            return {...state, theme: state.theme === 'light' ? 'dark' : 'light'};
         default:
             return state
     }
@@ -65,7 +40,7 @@ const useReducerContext = () => {
                 const data = await response.json();
                 dispatch({ type: 'GET_DENTISTS', payload: data });
             } catch (error) {
-            console.log("Error al obtener la información de los odontólogos: ", error);
+            console.log("No se pudo obtener la información: ", error);
             }
         };
 
@@ -78,7 +53,7 @@ const useReducerContext = () => {
             const detailData = await DetailResponse.json();
         dispatch({ type: 'GET_DENTIST', payload: detailData });
         } catch (error) {
-        console.log("Error al obtener más detalles del odontólogo: ", error);
+        console.log("No se pudo obtener más detalles del odontólogo: ", error);
       }
     };
   

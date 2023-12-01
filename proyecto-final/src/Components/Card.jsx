@@ -1,6 +1,8 @@
 import React from "react";
 import { Link} from "react-router-dom";
 import { useCharContext } from "./utils/global.context";
+import "../Styles/Card.css"
+import "../index.css"
 
 
 const Card = ({ character }) => {
@@ -12,7 +14,6 @@ const Card = ({ character }) => {
   const addFav = ()=>{
 
     if(findFav){
-      alert('Has eliminado este odontólogo de favoritos')
       dispatch({type: 'DELETE_FAV', payload: character})
       localStorage.setItem('favs', JSON.stringify(state.favs))
     } else {
@@ -30,7 +31,8 @@ const Card = ({ character }) => {
         <h3>{character.name}</h3>
         <p>{character.username}</p>
       </Link>
-      <button onClick={addFav} className="favButton">⭐</button>
+      <button onClick={addFav} className={`favButton ${findFav ? "favorited" : ""}`}>
+          {findFav ? "🧡" : "💙"}</button>
     </div>
   );
 };

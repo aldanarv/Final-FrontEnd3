@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import{ useCharContext } from '../Components/utils/global.context';
+import "../Styles/Detail.css"
 
 const Detail = () => {
 
@@ -21,13 +22,13 @@ const Detail = () => {
   }
 
   return (
-    <>
+    <div className='Detail'>
       <h1>Detail Dentist</h1>
       <p>Name: {dentist.name}</p>
       <p>Email: {dentist.email}</p>
       <p>Phone: {dentist.phone}</p>
       <p>Website: {dentist.website}</p>
-    </>
+    </div>
   )
 }
 

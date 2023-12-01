@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../Components/Card";
 import { useCharContext } from "../Components/utils/global.context";
+import "../index.css"
 
 const Favs = () => {
   const { state } = useCharContext();

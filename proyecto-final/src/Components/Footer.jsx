@@ -6,7 +6,7 @@ const Footer = () => {
   const {state } = useCharContext()
 
   return (
-    <footer className={state.theme ? 'light' : 'dark'}>
+    <footer className={state.theme}>
         <img src="./images/DH.png" alt='DH-logo' />
         <div>
         <img src="./images/ico-facebook.png" alt='Facebook'/>

@@ -1,0 +1,9 @@
+.home-cards{
+    width: 90vw;
+    padding: 5px 55px;
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
+    align-items: center;
+
+}
