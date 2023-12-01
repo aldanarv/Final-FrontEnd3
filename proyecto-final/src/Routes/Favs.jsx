@@ -7,7 +7,7 @@ const Favs = () => {
   const { state } = useCharContext();
 
   return (
-    <div className={state.theme ? 'light' : 'dark'}>
+    <div className= {`${state.theme}`}>
       <h1>Dentists Favorites</h1>
       <div className="card-grid">
       {state.favs.map((character) => (

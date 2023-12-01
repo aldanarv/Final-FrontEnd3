@@ -17,7 +17,7 @@ const Navbar = () => {
     <nav className={state.theme}>
       <div>
       <img src="./DH.ico" alt='Dh Logo'/>
-      <h1>Odonto</h1>
+      <h1 className='odontoTitle'>Odonto</h1>
       </div>
       <div>
       <Link to= '/'><h4>Home</h4></Link>

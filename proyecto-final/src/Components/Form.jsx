@@ -1,11 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useCharContext } from "./utils/global.context";
 import "../Styles/Form.css"
 
 const Form = () => {
   const [form, setForm] = useState(false);
   const [fullName, setFullName] = useState("");
+  const { state } = useCharContext();
 
   const {
     handleSubmit,
@@ -26,10 +28,10 @@ const Form = () => {
   }
 
   return (
-    <div>
+    <div className= {`${state.theme}`}>
       {form ? (
         <div>
-          <h3>{`Gracias ${fullName}, te contactaremos cuanto antes vía email.`}</h3>
+          <h3 className="text">{`Gracias ${fullName}, te contactaremos cuanto antes vía email.`}</h3>
           <div>
             <button onClick={resetForm}>Volver al formulario</button>
           </div>

@@ -25,7 +25,6 @@
     display: flex;
     justify-content: space-around;
     gap: 1rem;
-    width: 90vw;
     height: auto;
     flex-wrap: wrap;
     margin: 0 auto;
@@ -44,10 +43,4 @@
 
 .favButton.favorited {
     background-color:  #71b0d9;
-  }
-
-button:hover {
-    background-color:  rgb(220, 236, 238);
-    color: hsl(0, 0%, 100%);
-    box-shadow: rgb(191, 198, 198) 0px 4px 20px 0px;
-  }
+}

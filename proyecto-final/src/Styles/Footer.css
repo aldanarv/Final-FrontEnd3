@@ -1,31 +1,26 @@
 footer {
     display: flex;
-    width: 95vw;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
-
-    height: 40px;
-    margin-top: 2rem;
     background-color: rgb(163, 216, 248);
-    border-radius: 10px;
-    }
-
-footer > img{
-    width: 100vw;;
-    margin: 0;
+    margin-bottom: 20px;
+    margin-top: 110px;
     }
 
 footer > div{
     display: flex;
-    justify-content: space-around;
-    margin: 0;
+    justify-content:flex-end;
+    max-width: 70%;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 5px;
     }
 
 footer > div > img{
-    background-color: rgb(18, 64, 94);
-    padding: 4px;
-    margin: 3px;
+    max-width: 4%;
     border-radius: 10px;
+    padding: 10px;
     cursor: pointer;
 }
 
@@ -33,4 +28,9 @@ footer > div > img{
 footer > p{
     margin: 0;
     padding-top: 0.7rem;
+    }
+
+.digitalHouse {
+        max-width: 20%;
+        border-radius: 15px;
     }

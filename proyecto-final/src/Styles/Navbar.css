@@ -1,21 +1,20 @@
 nav{
     display: flex;
-    width: 95vw;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem;
     background-color: rgb(163, 216, 248);
-    border-radius: 10px;
+    margin-top: 20px;
   }
-
 
 nav > div{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin:0px 90px;
   }
 
-  nav > div > h1{
+.odontoTitle{
     color: rgb(18, 64, 94);
     margin: 5px;
   }
@@ -27,14 +26,14 @@ nav > div{
   
 
 a{
-    color: #000;
+    color: rgb(18, 64, 94);
     text-decoration: none;
     margin: 5px;
     cursor: pointer;
   }
 
 a:hover{
-    color: rgb(45, 115, 127);
+    color: rgb(75, 185, 215);
   } 
 
 

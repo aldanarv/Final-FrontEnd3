@@ -1,6 +1,6 @@
 .Detail {
-    max-width: 400px;
-    padding: 20px;
+    margin: 80px auto;
+    padding: 70px;
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #fff;
@@ -18,7 +18,7 @@ p {
     color: #555;
     margin-bottom: 10px;
 }
-  
+
 .NotFound {
     color: #ff0000; /* Color rojo */
     font-size: 18px;

@@ -22,8 +22,8 @@ const Detail = () => {
   }
 
   return (
-    <div className='Detail'>
-      <h1>Detail Dentist</h1>
+    <div className= {`${state.theme} Detail`}>
+      <h1 className='detailTitle'>Detail Dentist</h1>
       <p>Name: {dentist.name}</p>
       <p>Email: {dentist.email}</p>
       <p>Phone: {dentist.phone}</p>

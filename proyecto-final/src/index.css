@@ -1,6 +1,7 @@
 #root {
-  max-width: 1280px;
-  padding: 2rem;
+  max-width: 100%;
+  padding: 0rem;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -11,8 +12,14 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
   }
+
+  .page{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    }
 
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -27,14 +34,39 @@ h4{
     padding: 10px;
   }
   
-  .dark{
-    background-color: #00000096;
-    color: white; /*no esta haciendo nada*/
-
+  button:hover {
+    background-color:  rgb(18, 64, 94);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(191, 198, 198) 0px 4px 20px 0px;
   }
 
-  .dark > h1{
-    color: white;
+  .dark{
+    background-color: rgb(18, 64, 94);
+  }
+
+  .dark nav{
+    background-color: rgb(9, 45, 69);
+  }
+
+  .dark footer{
+    background-color: rgb(9, 45, 69);
+  }
+
+  .dark .text {
+    color:white
+  }
+
+  .dark .detailTitle {
+    color: rgb(0, 0, 0);
+  }
+
+  .dark > div > p{
+    color: black;
+  }
+
+  .dark .card {
+    background-color: #7d96a9;
+    border: rgb(60, 60, 60);
   }
 
   .dark > div > a{
@@ -45,6 +77,14 @@ h4{
       color: rgb(183, 183, 183);
   }
 
-  .dark > div > button{
+  .dark > div > button , .dark .digitalHouse{
     background-color: rgb(230, 231, 231);
+  }
+
+  .dark > h1, h2{
+    color: rgb(255, 255, 255);
+  }
+
+  .dark .odontoTitle{
+    color: white;
   }

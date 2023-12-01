@@ -1,5 +1,4 @@
 import { Route, Routes} from 'react-router-dom';
-
 import './index.css'
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
@@ -15,7 +14,7 @@ function App() {
   const {state} = useCharContext();
   return (
     
-      <div className= {`${state.theme}`}>
+      <div className= {`${state.theme} page`}>
           <Navbar/>
           <Routes>
             <Route path='/' element={<Home/>}/>
@@ -23,7 +22,7 @@ function App() {
             <Route path='/detail/:id' element={<Detail/>}/>
             <Route path='/contact' element={<Contact/>}/>
           </Routes>
-          <Footer/>    
+          <Footer/>
       </div>
   );
 }
